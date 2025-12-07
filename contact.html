@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="css/map.css" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/map.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/form-validation.js" defer></script>
+  </head>
+  <body class="p-3 background-image">
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-body-tertiary rounded-4 sticky-top"
+    >
+      <div class="container-fluid position-relative">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt="logo" height="70" />
+        </a>
+
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown"
+                href="projecten.html"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Projecten</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="projecten.html">Projecten</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Webtechnologie.html"
+                    >Webtechnologie</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Scripting.html">Scripting</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Datacom_Netwerken.html"
+                    >Datacom@netwerken</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Besturingssytemen.html"
+                    >Besturingsstemen</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="serverbeheer.html"
+                    >Serverbeheer</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="learn_work.html">Learn@work</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+    <div class="container my-5">
+      <div class="row g-4">
+        <main class="col-md-9">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <form
+                name="contact"
+                method="post"
+                data-netlify="true"
+                data-netlify-recaptcha="true"
+                class="flex-grow-1 bg-white bg-opacity-90 p-4 rounded shadow needs-validation"
+                novalidate
+              >
+                <fieldset>
+                  <legend class="text-uppercase fs-6 fw-bolder mb-3">
+                    Contactformulier
+                  </legend>
+
+                  <div class="mb-3">
+                    <label for="naam" class="form-label"
+                      >Naam &amp; Voornaam</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="naam"
+                      name="naam"
+                      placeholder=""
+                      value=""
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Gelieve uw naan & voornaam in te geven.
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Jouw@mailadres.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Gelieve uw E-mail adres in te geven
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="bericht" class="form-label">Bericht</label>
+                    <textarea
+                      class="form-control"
+                      id="bericht"
+                      placeholder="Uw bericht."
+                      rows="12"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">
+                      Gelieve informatie mee te geven waarover u wilt
+                      contacteren
+                    </div>
+                  </div>
+
+                  <div class="mb-3" data-netlify-recaptcha="true"></div>
+
+                  <input
+                    type="submit"
+                    class="btn btn-primary w-100"
+                    value="Verzenden"
+                  />
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </main>
+        <aside class="col-md-3 bg-white rounded p-3">
+          <div id="map"></div>
+          <hr />
+          <h2 class="text-uppercase fs-5 fw-bolder">Contact</h2>
+          <p>
+            <i class="bi bi-person"></i> Thomas Noppe<br />
+            <a href="mailto:thomas-noppe@live.be">
+              <i class="bi bi-envelope"></i> thomas-noppe@live.be </a
+            ><br />
+            <a href="tel:+32477909505">
+              <i class="bi bi-telephone blauwgrijs fs-6"></i> +32 477 90 95 05
+            </a>
+          </p>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/aphogeschool/"
+                ><i class="bi bi-instagram blauwgrijs fs-6"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/APHogeschool/?locale=nl_BE"
+                ><i class="bi bi-facebook blauwgrijs fs-6"></i
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/thomas-noppe-3a5740196/"
+                ><i class="bi bi-linkedin blauwgrijs fs-6"></i
+              ></a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+    <footer class="footer bg-light text-black mt-auto rounded-4 mt-5">
+      <div class="container text-center py-3">
+        <p class="footer">&copy;<span id="year"></span> Thomas Noppe</p>
+      </div>
+    </footer>
+  </body>
+</html>
